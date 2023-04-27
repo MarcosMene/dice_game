@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- google fonts  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap" rel="stylesheet">
+
+<!-- bootstrap icons  -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+<!-- css style  -->
+<link rel="stylesheet" href="assets/css/style.css">
+
+  <title>Dice game</title>
+</head>
+
+<body>
+  <main class="main">
+    <h1>Dice game</h1>
+    <section class="game">
+
+      <!-- players  -->
+      <div class="players">
+
+        <!--player 1-->
+     <div class="player1">
+      <div class="title">
+        <div class="title__player">
+          <h2>player 1</h2>
+          <div class="active"></div>
+        </div>
+      </div>
+      <div class="current">
+        <div class="current__player">
+          <h3>current</h3>
+          <p class="current__player__value">0</p>
+        </div>
+      </div>
+     </div>
+
+     <!--player 2-->
+     <div class="player2">
+      <div class="title">
+        <div class="title__player">
+          <h2>player 2</h2>
+          <div class="active"></div>
+        
+        </div>
+      </div>
+      <div class="current">
+        <div class="current__player">
+          <h3>current</h3>
+          <p class="current__player__value">0</p>
+        </div>
+      </div>
+     </div>
+      </div>
+      <!-- end players  -->
+
+      <!-- dice  -->
+      <div class="dice">
+        <img src="assets/images/dice_6.png">
+      </div>
+      <!-- end dice  -->
+
+      <!-- buttons  -->
+      <div class="buttons">
+        <div class="btn__newgame">
+          <div class="btn__newgame__icon">
+            <i class="bi bi-plus-circle"></i>
+            <h3>new game</h3>
+          </div>
+        </div>
+        <div class="btn__rolldice">
+          <i class="bi bi-arrow-repeat"></i>
+          <h3>roll dice</h3>
+        </div>
+        <div class="btn__hold">
+          <i class="bi bi-box-arrow-in-down"></i>
+          <h3>hold</h3>
+        </div>
+
+
+      </div>
+      <!-- end buttons  -->
+    </section>
+  </main>
+  
+  <script src="js/script.js"></script>
+</body>
+</html>
