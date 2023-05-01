@@ -25,6 +25,19 @@ body {
           justify-content: center;
 }
 
+.hidden {
+  display: none;
+}
+
+.btn {
+  padding: 5px 10px;
+  -webkit-transition: 0.5s background-color ease;
+  transition: 0.5s background-color ease;
+}
+.btn:hover {
+  background-color: rgb(244, 226, 177);
+}
+
 .main {
   width: 90vw;
   height: 90vh;
@@ -243,11 +256,22 @@ body {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  -webkit-box-shadow: -1px 2px 18px -5px rgba(0, 0, 0, 0.42);
-          box-shadow: -1px 2px 18px -5px rgba(0, 0, 0, 0.42);
 }
 .dice img {
   width: 70px;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+  -webkit-box-shadow: -1px 2px 18px -5px rgba(0, 0, 0, 0.42);
+          box-shadow: -1px 2px 18px -5px rgba(0, 0, 0, 0.42);
+  display: block;
+}
+.dice img.dice--rotation {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  -webkit-transform-origin: center;
+          transform-origin: center;
 }
 @media screen and (min-width: 768px) {
   .dice img {
@@ -255,13 +279,22 @@ body {
   }
 }
 
+.dice--grayscale {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  opacity: 0.5;
+}
+
 .buttons .btn__newgame {
-  width: 130px;
+  width: 140px;
   position: absolute;
   top: 3%;
   left: 50%;
   -webkit-transform: translate(-50%, -5%);
           transform: translate(-50%, -5%);
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
 }
 @media screen and (min-width: 768px) {
   .buttons .btn__newgame {
@@ -298,8 +331,8 @@ body {
   height: 50px;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-270%, -50%);
-          transform: translate(-270%, -50%);
+  -webkit-transform: translate(-200%, -50%);
+          transform: translate(-200%, -50%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -313,14 +346,16 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  cursor: pointer;
+  padding: 10px;
 }
 @media screen and (min-width: 768px) {
   .buttons .btn__hold {
-    top: 80%;
+    top: 83%;
     left: 50%;
     -webkit-transform: translate(-50%, -80%);
             transform: translate(-50%, -80%);
-    width: 80px;
+    width: 100px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -351,8 +386,8 @@ body {
   height: 50px;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(70%, -50%);
-          transform: translate(70%, -50%);
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -366,6 +401,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
 }
 @media screen and (min-width: 768px) {
   .buttons .btn__rolldice {
@@ -373,7 +411,7 @@ body {
     left: 50%;
     -webkit-transform: translate(-50%, -74%);
             transform: translate(-50%, -74%);
-    width: 120px;
+    width: 140px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -398,4 +436,8 @@ body {
     font-size: 1.7rem;
     font-weight: 400;
   }
+}
+
+.players .player.winner {
+  background-color: yellow;
 }/*# sourceMappingURL=style.css.map */
