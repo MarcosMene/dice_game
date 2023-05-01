@@ -25,7 +25,7 @@ const btnHold = document.querySelector('.btn__hold');
 scorePlayer1.textContent = 0;
 scorePlayer2.textContent = 0;
 
-// diceImg.classList.add('hidden');
+diceImg.classList.add('hidden');
 
 let currentScore = 0;
 const scorePlayers = [0, 0];
@@ -56,11 +56,13 @@ btnNew.addEventListener('click', () => {
   scorePlayers[1] = 0;
   document.querySelector('.player__1__score').textContent = 0;
   document.querySelector('.player__2__score').textContent = 0;
+  diceDiv.classList.add('dice--grayscale');
+  diceImg.src = `./assets/images/dice_1.png`;
 });
 
 btnRoll.addEventListener('click', () => {
   if (playing) {
-    // diceImg.classList.remove('hidden');
+    diceImg.classList.remove('hidden');
     diceDiv.classList.remove('dice--grayscale');
     diceImg.classList.toggle('dice--rotation');
     const diceNumber = Math.trunc(Math.random() * 6) + 1;
