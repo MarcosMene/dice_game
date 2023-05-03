@@ -109,7 +109,7 @@ btnHold.addEventListener('click', () => {
       scorePlayers[activePlayer - 1];
 
     //check if player won the game
-    if (scorePlayers[activePlayer - 1] >= 20) {
+    if (scorePlayers[activePlayer - 1] >= 100) {
       //game is finished
       playing = false;
 
